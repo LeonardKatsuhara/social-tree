@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+
+}
+
+body, html {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: gray;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .other-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.other-container .photo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+  
+.other-container .photo img {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+}
+
+.other-container .user {
+  margin-top: 12px;
+  color: black;
+  font-family: Karla, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+.other-container .description {
+  margin-top: 12px;
+}
+  
+.other-container .link-container {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  
+.link-container .link {
+  margin-top: 16px;
+  height: 56px;
+  width: 500px;
+  min-height: 56px;
+  border: 2px solid black;
+  color: white;
+  background: black;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 66px 16px 66px;
+  transition: ease 0.3s;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+  
+.link-container .link:hover {
+  background: white;
+  color: black;
+  transition: ease 0.5s;
+}
+  
+.other-container .social-container {
+  margin-top: 68px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 29px;
+}
+  
+.social-container .social {
+  transform: scale(0.9);
+  transition: ease 0.2s;
+}
+  
+.social-container .social:hover {
+  transform: scale(1);
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+@media only screen and (max-device-width: 500px) {
+/* .menu { width:400px; } */
+.link-container .link {
+  width: 350px;
+/* background: red; (only responsive test) */
+}
+}
+
+@media only screen and (max-device-width: 360px) {
+  /* .menu { width:400px; } */
+  .link-container .link {
+    width: 150px;
+    height: 45px;
+    min-height: 46px;
+    text-align: center;
+    padding: 10px 0;
+  /* background: green; (only responsive test) */
+  }
+  }
